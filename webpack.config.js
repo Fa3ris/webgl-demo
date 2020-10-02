@@ -14,6 +14,12 @@ module.exports = {
     contentBase: "./dist",
   },
   module: {
+    loaders: [
+      {
+        test: /\.glsl$/,
+        loader: "webpack-glsl",
+      },
+    ],
     rules: [
       {
         test: /\.m?js$/,
