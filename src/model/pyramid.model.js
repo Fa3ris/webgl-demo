@@ -1,5 +1,6 @@
 import { Triangle } from "./triangle.model";
 import { SimpleModel } from "./simple.model";
+import { Renderer } from "../render/renderer";
 
 export class Pyramid {
   constructor() {
@@ -17,5 +18,7 @@ export class Pyramid {
 
     this.model = new SimpleModel("simple");
     this.model.triangles = [triangle1, triangle2, triangle3, triangle4];
+
+    this.renderer = new Renderer();
   }
 }

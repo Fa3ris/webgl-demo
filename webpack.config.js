@@ -14,12 +14,6 @@ module.exports = {
     contentBase: "./dist",
   },
   module: {
-    loaders: [
-      {
-        test: /\.glsl$/,
-        loader: "webpack-glsl",
-      },
-    ],
     rules: [
       {
         test: /\.m?js$/,
@@ -29,6 +23,12 @@ module.exports = {
           options: {
             presets: ["@babel/preset-env"],
           },
+        },
+      },
+      {
+        test: /\.glsl$/,
+        use: {
+          loader: "webpack-glsl-loader",
         },
       },
     ],
